@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Universal Floral | Bringing Your Office to Life</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!-- Bootstrap CSS -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;400;900&display=swap" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+	<!-- Start Navigation -->
+	<nav class="navbar navbar-light navbar-expand-lg">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mymenu">
+			<span class="navbar-toggler-icon">&nbsp;</span>
+		</button>
+    <a class="navbar-brand" href="#">
+			<img src="{{ url_for('static', filename='img/universal-floral-office-plants-rental.png') }}" alt="Logo">
+		</a>
+    <div class="collapse navbar-collapse" id="mymenu">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active"> <a class="nav-link" href="/">Home</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="/about">About</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#">How we work</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#">What we do</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#">Clients</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#">Contact</a> </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- End Navigation --> 
+
+	{% block body %} {% endblock %}
+
+	<!-- Start Footer -->
+	<div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-4 mb-sm-3">
+					<img src="{{ url_for('static', filename='img/universal-floral-office-plants-rental.png') }}" alt="Logo">
+				</div>
+        <div class="col-12 col-lg-8"> <a href="#" class="foot-link">Privacy | Terms</a> </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Footer --> 
+
+<!-- External JS libraries --> 
+<script src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script> 
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+</body>
+</html>

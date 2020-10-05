@@ -1,0 +1,94 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<!-- Start Header -->
+<div class="header">
+  <div class="headerinner">
+    <div class="h1-title text-center">About Universal Floral</div>
+  </div>
+</div>
+<div class="bighead"><img src="{{ url_for('static', filename='img/About-us-768x275.jpg') }}" alt="About Us"></div>
+<!-- End Header --> 
+<!-- Start Text Area -->
+<div class="container">
+  <div class="textbx">
+    <p>The office plants we install and maintain are a reflection of us as much as they are of our clients. That’s why we take extra special care during each phase of the interior landscaping process. Before we install the first plant, our designers visit your facility to check all factors that may create problems such as lighting, heating, cooling, traffic flow and interior design. Then we develop a unique individual plan using plants that will complement your facility and flourish in it. We can work with your design team or directly with you. Universal Floral Office Plant Rental team are here to develop the best possible floral package for your business. Call us today on&nbsp;<a class="phone" href="tel:353 1 269 5216">353 1 269 5216&nbsp;</a>for a free quote</p>
+    <p><strong>We attribute a great deal of our success to four main factors:</strong></p>
+    <ul>
+      <li>High-Quality Plant Installations.</li>
+      <li>Professional Design Service geared to the best possible use of plants and foliage within a particular area.</li>
+      <li>Computer Scheduled Back-up Service to keep installations in pristine condition at all times.</li>
+      <li>Realistic, extremely competitive rental and maintenance price structures.</li>
+    </ul>
+    <h3><strong>RECENT OFFICE PLANTS RENTAL PROJECTS</strong></h3>
+    <ul class="mb-0">
+      <li><a title="Facebook UK" href="http://www.universalfloral.com/portfolio/facebook-uk-3/">Facebook, UK</a></li>
+      <li><a title="XL Insurance" href="http://www.universalfloral.com/portfolio/xl-insurance/">XL Insurance</a></li>
+      <li><a title="Facebook Dublin" href="http://www.universalfloral.com/portfolio/facebook-dublin/">Facebook, Dublin</a></li>
+    </ul>
+  </div>
+</div>
+<!-- End Text Area --> 
+
+{% include 'includes/our_client.html' %}
+
+<!-- Start Our Team -->
+<div class="ourteam">
+  <div class="container">
+    <div class="heading-title text-center">Our Team</div>
+    <div class="mb-5">
+      <p>We are a family company operating in the interior landscaping business for over 40 years now and we’re still growing. We provide a local service nationwide with technicians based in Donegal, Limerick, Cork, Dublin and Belfast with recent expansion into London, UK. We provide a personal interior landscaping service with great attention to detail and after service.</p>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-4 text-center">
+        <div class="membx">
+          <div class="memberpic mb-2"><img class="img-fluid" src="{{ url_for('static', filename='img/marie-caffrey.jpg') }}" alt=""></div>
+          <div class="name">MARIE CAFFREY</div>
+          <div class="position mb-4">BUSINESS DEVELOPMENT</div>
+          <div class="about-text mb-2">Marie is responsible for all new business requirements. Please call or email to arrange a consultation.</div>
+          <div class="call">t: <a href="#">353 1 269 5216</a></div>
+          <div class="email mb-4">e: <a href="#">marie@universalfloral.com</a></div>
+          <div class="social mb-5">
+            <a href="#" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+            <a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 text-center">
+        <div class="membx">
+          <div class="memberpic mb-2"><img class="img-fluid" src="{{ url_for('static', filename='img/martin-mc-gettigan.jpg') }}" alt=""></div>
+          <div class="name">MARTIN MCGETTIGAN</div>
+          <div class="position mb-4">SALES DIRECTOR</div>
+          <div class="about-text mb-2">Martin heads up our sales team and deals with all client requirements, ensuring their needs are met.</div>
+          <div class="call">t: <a href="#">+353 1 269 5031</a></div>
+          <div class="email mb-4">e: <a href="#">martin@universalfloral.com</a></div>
+          <div class="social mb-4">
+            <a href="#" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+            <a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 text-center">
+        <div class="membx">
+          <div class="memberpic mb-2"><img class="img-fluid" src="{{ url_for('static', filename='img/neil-caffrey.jpg') }}" alt=""></div>
+          <div class="name">NEIL CAFFREY</div>
+          <div class="position mb-4">MAINTENANCE TEAM</div>
+          <div class="about-text mb-2">Neil is part of our maintenance team and is responsible for ensuring your planting is in perfect shape.</div>
+          <div class="call">t: <a href="#">+353 1 269 5031</a></div>
+          <div class="email mb-4">e: <a href="#">info@universalfloral.com</a></div>
+          <div class="social">
+            <a href="#" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+            <a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Start Our Team -->
+
+{% endblock %}
