@@ -1,13 +1,14 @@
 {% extends 'layout.html' %}
+{% set active_page = "index" %}
 
 {% block body %}
 
 <!-- Start Header -->
-<div class="header marb50">
+<div class="header marb30">
   <div class="headerbg">
     <div class="slide-inner">
-      <div class="slide-heading">Premier Corporate Plant Rental &amp; Maintenance Service</div>
-      <div class="slide-description">WORKING IN A GREEN OFFICE IN EUROPE</div>
+      <div class="slide-heading animate__animated animate__fadeInUp">Premier Corporate Plant Rental &amp; Maintenance Service</div>
+      <div class="slide-description animate__animated animate__fadeInUp">WORKING IN A GREEN OFFICE IN EUROPE</div>
     </div>
     <div class="imagebx"><img src="{{ url_for('static', filename='img/home.jpeg') }}" alt=""></div>
   </div>
@@ -16,7 +17,14 @@
 <!-- Start Recent Project -->
 <div class="recent-project text-center">
   <div class="heading-title">Recent Projects</div>
-  <div class="recent-gallery"> Recent Project Gallery Goes Here </div>
+  <div class="recent-gallery">
+    <div class="gallery-slider">
+      <div><img src="{{ url_for('static', filename='img/stripe-2-450x338-1.jpg') }}" alt="" /></div>
+      <div><img src="{{ url_for('static', filename='img/slack-5-450x338-1.jpg') }}" alt="" /></div>
+      <div><img src="{{ url_for('static', filename='img/IMG_4208-e1456850429707-450x338-1.jpg') }}" alt="" /></div>
+      <div><img src="{{ url_for('static', filename='img/XL-Insurance-4-450x338-1.jpg') }}" alt="" /></div>
+	  </div>
+  </div>
 </div>
 <!-- End Recent Project --> 
 

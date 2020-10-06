@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+{% set active_page = "how-we-work" %}
+
+{% block body %}
+
+<!-- Start Header -->
+<div class="header">
+  <div class="headerinner">
+    <div class="h1-title text-center">How we Work</div>
+  </div>
+</div>
+<div class="bighead"><img src="{{ url_for('static', filename='img/how-we-work3-768x275.jpg') }}" alt="How We Work"></div>
+<!-- End Header --> 
+<!-- Start Text Area -->
+<div class="container">
+  <div class="textbx">
+    <p><strong>Universal Floral Office Plants Rental</strong>&nbsp;first step is when we come to visit your&nbsp;office and discuss your planting&nbsp;requirements. Our expert team will recommend the best suitable plants and floral arrangements for each area together you desire with containers to match the style and colour scheme of your corporate&nbsp;office building.</p>
+    <p><strong>Universal Floral Office Plants Rental</strong>&nbsp;will also complete a full environmental audit taking in conditioning factors such as lighting, heating, cooling and traffic flow. We can work directly with you or with your designers on your planting requirements. A speedy delivery and in-house installation team will follow.</p>
+    <p><strong>Universal Floral</strong>&nbsp;has the best competitive office plant rental terms and can work within any budget.</p>
+    <h3 class="black"><strong>PLANT MAINTENANCE</strong></h3>
+    <p>Once your&nbsp;office plants are installed, we provide a reliable and personal maintenance service to ensure your plants are maintained and managed. Our maintenance team will clean, prune, feed and replace plants as needed without any additional cost. This ensures your rented plants are maintained to the highest standards.</p>
+    <p><strong>Universal Floral</strong>&nbsp;operates throughout Ireland, UK. &amp; several other European countries &nbsp;No project is too big or too small.</p>
+    <p class="mb-0">No project is too big or too small.</p>
+  </div>
+</div>
+<!-- End Text Area -->
+
+{% include 'includes/our_client.html' %}
+{% endblock %}

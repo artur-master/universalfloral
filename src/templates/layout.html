@@ -6,12 +6,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <!-- Bootstrap CSS -->
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;400;900&display=swap" rel="stylesheet">
 <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+<!-- Google Font CSS -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap" rel="stylesheet">
+<!-- Gallery CSS -->
+<link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<!-- Animation CSS -->
+<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<!-- Font Awesome Kit -->
+<script src="https://kit.fontawesome.com/a302a0f2bd.js" crossorigin="anonymous"></script>
+<!-- Custom CSS -->
 <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
+  {% 
+    set nav_bar = [
+      ('/', 'index', 'Home'),
+      ('/about', 'about', 'About'),
+      ('/how-we-work', 'how-we-work', 'How we work'),
+      ('/what-we-do', 'what-we-do', 'What we do'),
+      ('/clients', 'clients', 'Clients'),
+      ('/contact', 'contact', 'Contact')
+    ]
+  -%}
+  {% set active_page = active_page|default('index') -%}
+
 	<!-- Start Navigation -->
 	<nav class="navbar navbar-light navbar-expand-lg">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mymenu">
@@ -22,12 +42,11 @@
 		</a>
     <div class="collapse navbar-collapse" id="mymenu">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active"> <a class="nav-link" href="/">Home</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="/about">About</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="#">How we work</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="#">What we do</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="#">Clients</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="#">Contact</a> </li>
+        {% for href, id, caption in nav_bar %}
+        <li class="nav-item {% if id == active_page %} active {% endif %}">
+          <a class="nav-link" href="{{ href|e }}">{{ caption|e }}</a>
+        </li>
+        {% endfor %}
       </ul>
     </div>
   </nav>
@@ -39,7 +58,7 @@
 	<div class="footer">
     <div class="container">
       <div class="row">
-        <div class="col-12 col-lg-4 mb-sm-3">
+        <div class="col-12 col-lg-4 mb-lg-0 mb-3">
 					<img src="{{ url_for('static', filename='img/universal-floral-office-plants-rental.png') }}" alt="Logo">
 				</div>
         <div class="col-12 col-lg-8"> <a href="#" class="foot-link">Privacy | Terms</a> </div>
@@ -51,5 +70,7 @@
 <!-- External JS libraries --> 
 <script src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script> 
 <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>

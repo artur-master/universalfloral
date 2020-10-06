@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+{% set active_page = "what-we-do" %}
+
+{% block body %}
+
+<!-- Start Header -->
+<div class="header">
+  <div class="headerinner">
+    <div class="h1-title text-center">What we do</div>
+  </div>
+</div>
+<div class="bighead"><img src="{{ url_for('static', filename='img/what-we-do1-768x275.jpg') }}" alt="What we do"></div>
+<!-- End Header --> 
+<!-- Start Text Area -->
+<div class="container">
+  <div class="textbx">
+    <p><strong>Universal Floral Office Plant Rental &amp; Maintenance</strong>&nbsp;is a family company specialising in interior landscaping for over 40 years.</p>
+    <p>Traditionally, employers have viewed plants as the finishing touch to their buildings. But as more and more research has shown that plants reduce stress, improve concentration and increase productivity, enlightened companies understand the very real benefits plants can have in the workplace.</p>
+    <p>Universal Floral offer the following services:</p>
+    <ul class="mb-0">
+      <li><a title="Office Plant Rental" href="http://www.universalfloral.com/services-3/office-plant-rental/">Office Plant Rental</a></li>
+      <li><a title="Office Plant Maintenance" href="http://www.universalfloral.com/services-3/plant-maintenance/">Office Plant&nbsp;Maintenance</a></li>
+      <li><a title="Pots &amp; Planters" href="http://www.universalfloral.com/product-category/pots-planters/">Pots &amp; Planters</a></li>
+      <li><a title="Corporate Floral Displays" href="http://www.universalfloral.com/services-3/floral-displays/">Corporate Floral Displays</a></li>
+      <li><a title="Bespoke Interior &amp; Exterior Landscaping" href="http://www.universalfloral.com/bespoke-interior-exterior-landscaping/">Bespoke Interior &amp; Exterior Landscaping</a></li>
+    </ul>
+  </div>
+</div>
+<!-- End Text Area -->
+
+{% include 'includes/our_client.html' %}
+{% endblock %}

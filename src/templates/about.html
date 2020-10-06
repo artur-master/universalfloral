@@ -1,4 +1,5 @@
 {% extends 'layout.html' %}
+{% set active_page = "about" %}
 
 {% block body %}
 
@@ -21,7 +22,7 @@
       <li>Computer Scheduled Back-up Service to keep installations in pristine condition at all times.</li>
       <li>Realistic, extremely competitive rental and maintenance price structures.</li>
     </ul>
-    <h3><strong>RECENT OFFICE PLANTS RENTAL PROJECTS</strong></h3>
+    <h3 class="black"><strong>RECENT OFFICE PLANTS RENTAL PROJECTS</strong></h3>
     <ul class="mb-0">
       <li><a title="Facebook UK" href="http://www.universalfloral.com/portfolio/facebook-uk-3/">Facebook, UK</a></li>
       <li><a title="XL Insurance" href="http://www.universalfloral.com/portfolio/xl-insurance/">XL Insurance</a></li>
@@ -43,7 +44,9 @@
     <div class="row">
       <div class="col-12 col-md-4 text-center">
         <div class="membx">
-          <div class="memberpic mb-2"><img class="img-fluid" src="{{ url_for('static', filename='img/marie-caffrey.jpg') }}" alt=""></div>
+          <div class="memberpic mb-2">
+            <img class="img-fluid" src="{{ url_for('static', filename='img/marie-caffrey.jpg') }}" alt="">
+          </div>
           <div class="name">MARIE CAFFREY</div>
           <div class="position mb-4">BUSINESS DEVELOPMENT</div>
           <div class="about-text mb-2">Marie is responsible for all new business requirements. Please call or email to arrange a consultation.</div>
