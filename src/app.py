@@ -29,6 +29,14 @@ def create_app(env_name):
   @app.route('/what-we-do')
   def whatwedo():
     return render_template('/what-we-do.html')
+  
+  @app.route('/clients')
+  def clients():
+    return render_template('/clients.html')
+  
+  @app.route('/contact')
+  def contact():
+    return render_template('/contact.html')
 
   return app
 

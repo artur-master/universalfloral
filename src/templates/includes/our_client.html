@@ -1,33 +1,28 @@
-<!-- Start Our Client -->
+{% 
+  set default_clients = [
+    ('GrantT.png', 'GrantT'),
+    ('IBM.png', 'IBM'),
+    ('ID.png', 'ID'),
+    ('Intel.png', 'Intel'),
+    ('Sisk.png', 'Sisk'),
+    ('SL.png', 'SL'),
+    ('Symnatec.png', 'Symnatec'),
+    ('UPS.png', 'UPS')
+  ]
+-%}
+{% set clients = clients|default(default_clients) -%}
 <div class="our-client text-center">
     <div class="container big">
       <div class="heading-title">Our Clients</div>
       <div class="row">
-        <div class="col-12 col-md-3">
-          <div class="logobx mb-3"><img src="{{ url_for('static', filename='img/GrantT.png') }}" alt="GrantT"></div>
-        </div>
-        <div class="col-12 col-md-3">
-          <div class="logobx mb-3"><img src="{{ url_for('static', filename='img/IBM.png') }}" alt="IBM"></div>
-        </div>
-        <div class="col-12 col-md-3">
-          <div class="logobx mb-3"><img src="{{ url_for('static', filename='img/ID.png') }}" alt="ID"></div>
-        </div>
-        <div class="col-12 col-md-3">
-          <div class="logobx mb-3"><img src="{{ url_for('static', filename='img/intel.png') }}" alt="Intel"></div>
-        </div>
-        <div class="col-12 col-md-3">
-          <div class="logobx mb-3"><img src="{{ url_for('static', filename='img/Sisk.png') }}" alt="Sisk"></div>
-        </div>
-        <div class="col-12 col-md-3">
-          <div class="logobx mb-3"><img src="{{ url_for('static', filename='img/SL.png') }}" alt="SL"></div>
-        </div>
-        <div class="col-12 col-md-3">
-          <div class="logobx mb-3"><img src="{{ url_for('static', filename='img/Symnatec.png') }}" alt="Symnatec"></div>
-        </div>
-        <div class="col-12 col-md-3">
-          <div class="logobx mb-3"><img src="{{ url_for('static', filename='img/UPS.png') }}" alt="UPS"></div>
-        </div>
+        {% for src, id in clients %}
+          <div class="col-12 col-md-3">
+            <div class="logobx mb-3">
+              {% set img_src = "static/img/"+src %}
+              <img src="{{ img_src }}" alt="{{ id }}">
+            </div>
+          </div>
+          {% endfor %}
       </div>
     </div>
   </div>
-  <!-- End Our Client -->

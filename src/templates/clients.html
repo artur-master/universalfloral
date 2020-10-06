@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+{% set active_page = "clients" %}
+
+{% block body %}
+
+<!-- Start Header -->
+<div class="header">
+  <div class="headerinner">
+    <div class="h1-title text-center">Our Clients</div>
+  </div>
+</div>
+<!-- End Header --> 
+<!-- Start Our Client -->
+{% 
+  set clients = [
+    ('Facebook.png', 'Facebook'),
+    ('Salesforce.png', 'Salesforce'),
+    ('Samsung.png', 'Samsung'),
+    ('Pinterest.png', 'Pinterest'),
+    ('GrantT.png', 'GrantT'),
+    ('IBM.png', 'IBM'),
+    ('ID.png', 'ID'),
+    ('Intel.png', 'Intel'),
+    ('Microsoft.png', 'Microsoft'),
+    ('Airbnb.png', 'Airbnb'),
+    ('Instagram.png', 'Instagram'),
+    ('VW.png', 'VW'),
+    ('Sisk.png', 'Sisk'),
+    ('SL.png', 'SL'),
+    ('Symnatec.png', 'Symnatec'),
+    ('UPS.png', 'UPS')
+  ]
+-%}
+
+{% include 'includes/our_client.html' %}
+<!-- End Our Client --> 
+
+{% endblock %}
