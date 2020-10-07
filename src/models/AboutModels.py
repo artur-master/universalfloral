@@ -1,5 +1,3 @@
-from marshmallow import fields, Schema
-import datetime
 from . import db
 
 class TeamModel(db.Model):
@@ -40,14 +38,3 @@ class TeamModel(db.Model):
     
   def __repr__(self):
     return '<id {}>'.format(self.id)
-
-
-
-# class UserSchema(Schema):
-#   id = fields.Int(dump_only=True)
-#   name = fields.Str(required=True)
-#   email = fields.Email(required=True)
-#   password = fields.Str(required=True, load_only=True)
-#   created_at = fields.DateTime(dump_only=True)
-#   modified_at = fields.DateTime(dump_only=True)
-#   blogposts = fields.Nested(BlogpostSchema, many=True)
