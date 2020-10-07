@@ -1,6 +1,6 @@
 from marshmallow import fields, Schema
 import datetime
-from . import db, bcrypt
+from . import db
 
 class TeamModel(db.Model):
   # table name
