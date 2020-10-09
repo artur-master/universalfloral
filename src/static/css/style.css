@@ -72,7 +72,7 @@ ul.slick-dots li.slick-active button{opacity:1}
 .textbx h3{font-size: 20px;}
 .membx{padding: 0px 30px;}
 .ourteam{padding: 60px 0px; color: #848484; line-height: 26px;}
-.name{color: #000000;font-size: 35px;font-weight: 900;}
+.name{text-transform: uppercase;color: #000000;font-size: 35px;font-weight: 900;}
 .position{text-transform: uppercase;letter-spacing: 5px; font-weight: 300; color: #bfbfbf;}
 .social a{color: #000; font-size: 18px; margin: 0px 15px;}
 .social a:hover{color: #1ad332;}
@@ -89,9 +89,23 @@ ul.slick-dots li.slick-active button{opacity:1}
 
 .conmap{height: 400px;}
 .conmap iframe{width: 100%; max-width: 100%; height: 100%;}
+.menu-center .h-logo{padding: 10px 0px;}
+.menu-center .h-phone{font-size: 17px; padding-top: 37px;color: rgba(0,0,0,.8);}
+.menu-center .h-social{font-size: 20px; padding-top: 33px;}
+.menu-center .h-social a{display: inline-block; margin: 0 0 0 20px; color: rgba(0,0,0,.7);}
+.menu-center .h-social a:hover{color: #318890;}
 
-	
-/*--- Responsive CSS */	
+/*--- Responsive CSS */
+@media (min-width: 992px) {
+.menu-center{background: #fff;}
+/* .menu-center .logo{padding: 10px 0px;} */
+.menu-center .navbar-brand{margin:auto;}
+.menu-center .navbar-light.navbar{padding: 15px 0px 5px 0px;}
+.menu-center .navbar-light .navbar-nav .nav-item {padding: 0px 40px;}
+.sticky {position: fixed;top: 0; width: 100%;z-index: 99999; box-shadow: 0 0 7px rgba(0,0,0,0.2);}
+.sticky + .header {padding-top: 141px;}
+.menu-center.sticky .navbar-light.navbar{padding-bottom: 15px;}
+}
 @media (max-width: 1199px) { 
 .navbar-light .navbar-nav .nav-item { padding-left: 15px; padding-right: 15px;}
 .heading-title {font-size: 45px;}
@@ -111,6 +125,9 @@ ul.slick-dots li.slick-active button{opacity:1}
 .membx {padding: 0px;}
 .name {font-size: 30px;}
 .conbx {padding: 40px 0px;}
+.menu-center .h-phone{padding-top: 0px;}
+.menu-center .h-social{padding-top: 0px;}
+.menu-center .h-social a{margin: 0 20px 0 0;}
 }
 @media (max-width: 767px) { 
 .slide-heading {font-size: 25px;}
@@ -132,10 +149,3 @@ ul.slick-dots li.slick-active button{opacity:1}
 .headerbg {height: 250px;}
 .logobx { padding-top: 10px; padding-bottom: 10px;}
 }
-
-
-
-
-
-
-

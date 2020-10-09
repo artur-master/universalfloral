@@ -32,24 +32,63 @@
   -%}
   {% set active_page = active_page|default('index') -%}
 
-	<!-- Start Navigation -->
-	<nav class="navbar navbar-light navbar-expand-lg">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mymenu">
-			<span class="navbar-toggler-icon">&nbsp;</span>
-		</button>
-    <a class="navbar-brand" href="#">
-			<img src="{{ url_for('static', filename='img/universal-floral-office-plants-rental.png') }}" alt="Logo">
-		</a>
-    <div class="collapse navbar-collapse" id="mymenu">
-      <ul class="navbar-nav ml-auto">
-        {% for href, id, caption in nav_bar %}
-        <li class="nav-item {% if id == active_page %} active {% endif %}">
-          <a class="nav-link" href="{{ href|e }}">{{ caption|e }}</a>
-        </li>
-        {% endfor %}
-      </ul>
+  <!-- Start Navigation -->
+  <div class="menu-center" id="navbar">
+    <div class="container d-none d-lg-block d-xl-block">
+      <div class="row">
+        <div class="col-4">
+          <div class="h-phone">
+            <i class="fas fa-mobile-alt"></i> &nbsp;<a href="tel:0345 505 3333">0345 505 3333</a>
+          </div>
+        </div>
+        <div class="col-4 text-center">
+          <div class="h-logo">
+            <a class="navbar-brand" href="/">
+              <img src="{{ url_for('static', filename='img/universal-floral-office-plants-rental.png') }}" alt="Logo">
+            </a>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="h-social text-right">
+            <a href="https://www.facebook.com/UniversalFloral/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/universalfloral/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/company/universal-floral-display/?originalSubdomain=es" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>	
     </div>
-  </nav>
+    <nav class="navbar navbar-light navbar-expand-lg">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mymenu">
+        <span class="navbar-toggler-icon">&nbsp;</span>
+      </button>
+      <a class="navbar-brand d-block d-lg-none d-xl-none" href="/">
+        <img src="{{ url_for('static', filename='img/universal-floral-office-plants-rental.png') }}" alt="Logo">
+      </a>
+      <div class="collapse navbar-collapse" id="mymenu">
+        <ul class="navbar-nav m-auto">
+          {% for href, id, caption in nav_bar %}
+          <li class="nav-item {% if id == active_page %} active {% endif %}">
+            <a class="nav-link" href="{{ href|e }}">{{ caption|e }}</a>
+          </li>
+          {% endfor %}
+          <li class="nav-item d-block d-lg-none d-xl-none">
+            <div class="h-phone"><i class="fas fa-mobile-alt"></i> &nbsp;
+              <a href="tel:0345 505 3333">0345 505 3333</a>
+            </div>
+          </li>
+          <li class="nav-item d-block d-lg-none d-xl-none">
+            <div class="h-social">
+              <a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+              <a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+              <a href="#" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+              <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </li>        
+        </ul>
+      </div>
+    </nav>
+  </div>
   <!-- End Navigation --> 
 
 	{% block body %} {% endblock %}

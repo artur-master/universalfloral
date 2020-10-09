@@ -6,10 +6,11 @@ class TeamModel(db.Model):
 
   id = db.Column(db.Integer, primary_key=True)
   name = db.Column(db.String(128), nullable=False)
+  avatar = db.Column(db.String(1000), nullable=True)
   position = db.Column(db.String(128), nullable=True)
   about = db.Column(db.String(1000), nullable=True)
   call = db.Column(db.String(128), nullable=True)
-  email = db.Column(db.String(128), nullable=True)  
+  email = db.Column(db.String(128), nullable=True)
 
   # class constructor
   def __init__(self, data):

@@ -7,22 +7,32 @@
     ('Sisk.png', 'Sisk'),
     ('SL.png', 'SL'),
     ('Symnatec.png', 'Symnatec'),
-    ('UPS.png', 'UPS')
+    ('UPS.png', 'UPS'),
+    ('Slack.png', 'Slack'),
+    ('Fifthflour.png', 'Fifthflour')
   ]
 -%}
 {% set clients = clients|default(default_clients) -%}
 <div class="our-client text-center">
     <div class="container big">
       <div class="heading-title">Our Clients</div>
-      <div class="row">
+      <!-- <div class="row">
         {% for src, id in clients %}
           <div class="col-12 col-md-3">
             <div class="logobx mb-3">
-              {% set img_src = "static/img/"+src %}
+              {% set img_src = "static/img/clients/"+src %}
               <img src="{{ img_src }}" alt="{{ id }}">
             </div>
           </div>
           {% endfor %}
+      </div> -->
+      <div class="gallery-slider text-center">
+        {% for src, id in clients %}
+        <div class="m-3">
+          {% set img_src = "static/img/clients/"+src %}
+          <img src="{{ img_src }}" alt="{{ id }}">
+        </div>
+        {% endfor %}
       </div>
     </div>
   </div>
