@@ -41,16 +41,18 @@
       <p>We are a family company operating in the interior landscaping business for over 40 years now and we’re still growing. We provide a local service nationwide with technicians based in Donegal, Limerick, Cork, Dublin and Belfast with recent expansion into London, UK. We provide a personal interior landscaping service with great attention to detail and after service.</p>
     </div>
     <div class="row">
+      {% for team in teams %}
       <div class="col-12 col-md-4 text-center">
         <div class="membx">
           <div class="memberpic mb-2">
-            <img class="img-fluid" src="{{ url_for('static', filename='img/avatars/marie-caffrey.jpg') }}" alt="">
+            {% set img_src = "/static/img/avatars/"+team.avatar -%}
+            <img class="img-fluid" src="{{ img_src }}" alt="{{ team.name }}">
           </div>
-          <div class="name">MARIE CAFFREY</div>
-          <div class="position mb-4">BUSINESS DEVELOPMENT</div>
-          <div class="about-text mb-2">Marie is responsible for all new business requirements. Please call or email to arrange a consultation.</div>
-          <div class="call">t: <a href="#">353 1 269 5216</a></div>
-          <div class="email mb-4">e: <a href="#">marie@universalfloral.com</a></div>
+          <div class="name">{{ team.name }}</div>
+          <div class="position mb-4">{{ team.position }}</div>
+          <div class="about-text mb-2">{{ team.about }}</div>
+          <div class="call">t: <a href="#">{{ team.call }}</a></div>
+          <div class="email mb-4">e: <a href="#">{{ team.email }}</a></div>
           <div class="social mb-5">
             <a href="#" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
             <a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
@@ -58,36 +60,7 @@
           </div>
         </div>
       </div>
-      <div class="col-12 col-md-4 text-center">
-        <div class="membx">
-          <div class="memberpic mb-2"><img class="img-fluid" src="{{ url_for('static', filename='img/avatars/martin-mc-gettigan.jpg') }}" alt=""></div>
-          <div class="name">MARTIN MCGETTIGAN</div>
-          <div class="position mb-4">SALES DIRECTOR</div>
-          <div class="about-text mb-2">Martin heads up our sales team and deals with all client requirements, ensuring their needs are met.</div>
-          <div class="call">t: <a href="#">+353 1 269 5031</a></div>
-          <div class="email mb-4">e: <a href="#">martin@universalfloral.com</a></div>
-          <div class="social mb-4">
-            <a href="#" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-            <a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-            <a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-4 text-center">
-        <div class="membx">
-          <div class="memberpic mb-2"><img class="img-fluid" src="{{ url_for('static', filename='img/avatars/neil-caffrey.jpg') }}" alt=""></div>
-          <div class="name">NEIL CAFFREY</div>
-          <div class="position mb-4">MAINTENANCE TEAM</div>
-          <div class="about-text mb-2">Neil is part of our maintenance team and is responsible for ensuring your planting is in perfect shape.</div>
-          <div class="call">t: <a href="#">+353 1 269 5031</a></div>
-          <div class="email mb-4">e: <a href="#">info@universalfloral.com</a></div>
-          <div class="social">
-            <a href="#" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-            <a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-            <a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-          </div>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </div>

@@ -149,3 +149,7 @@ ul.slick-dots li.slick-active button{opacity:1}
 .headerbg {height: 250px;}
 .logobx { padding-top: 10px; padding-bottom: 10px;}
 }
+
+.page_not_found {
+    height: calc(100vh - 238px);
+}

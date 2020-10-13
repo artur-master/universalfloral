@@ -15,6 +15,7 @@ class TeamModel(db.Model):
   # class constructor
   def __init__(self, data):
     self.name = data.get('name')
+    self.avatar = data.get('avatar')
     self.position = data.get('email')
     self.about = data.get('about')
     self.call = data.get('call')

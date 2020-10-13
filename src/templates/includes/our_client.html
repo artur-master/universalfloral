@@ -29,7 +29,7 @@
       <div class="gallery-slider text-center">
         {% for src, id in clients %}
         <div class="m-3">
-          {% set img_src = "static/img/clients/"+src %}
+          {% set img_src = "/static/img/clients/"+src %}
           <img src="{{ img_src }}" alt="{{ id }}">
         </div>
         {% endfor %}

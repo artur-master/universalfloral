@@ -1,0 +1,46 @@
+{
+    "RecentProjects" : [
+        {
+            "name": "Stripe",
+            "photo": "stripe-2-450x338-1.jpg"
+        },
+        {
+            "name": "Slack",
+            "photo": "slack-5-450x338-1.jpg"
+        },
+        {
+            "name": "IMG-4208",
+            "photo": "IMG_4208-e1456850429707-450x338-1.jpg"
+        },
+        {
+            "name": "XL-Insurance",
+            "photo": "XL-Insurance-4-450x338-1.jpg"
+        }
+    ],
+    "Teams":[
+        {
+            "name":"Marie Caffrey",
+            "position":"BUSINESS DEVELOPMENT",
+            "about":"Marie is responsible for all new business requirements. Please call or email to arrange a consultation.",
+            "call":"353 1 269 5216",
+            "email":"marie@universalfloral.com",
+            "avatar":"marie-caffrey.jpg"
+        },
+        {
+            "name":"MARTIN MCGETTIGAN",
+            "position":"SALES DIRECTOR",
+            "about":"Martin heads up our sales team and deals with all client requirements, ensuring their needs are met.",
+            "call":"353 1 269 5031",
+            "email":"martin@universalfloral.com",
+            "avatar":"martin-mc-gettigan.jpg"
+        },
+        {
+            "name":"NEIL CAFFREY",
+            "position":"MAINTENANCE TEAM",
+            "about":"Neil is part of our maintenance team and is responsible for ensuring your planting is in perfect shape.",
+            "call":"353 1 269 5031",
+            "email":"info@universalfloral.com",
+            "avatar":"neil-caffrey.jpg"
+        }
+    ]
+}
