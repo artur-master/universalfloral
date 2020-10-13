@@ -4,7 +4,7 @@
    *** It will be needed to add SMTP informations for Sending Email service. ***
    - MAIL_USERNAME : SMTP account email
    - MAIL_PASSWORD : SMTP account password
-   - MAIL_RECIPIENTS : Recipeients Email
+   - MAIL_RECIPIENTS : Recipients Email
 3. Run App
    1) Install Virtualenv and packages from requirements.txt
     - pip install -r requirements.txt
