@@ -31,7 +31,7 @@ def create_app(env_name):
     if request.method == "POST":
         if form.validate_on_submit():
             msg = "Massage send!"
-            send_email(subject='Message from contact form', sender=app.config['MAIL_USERNAME'], recipients=[app.config['MAIL_RECIPIENTS']],
+            send_email(subject='Message from contact form', sender=app.config['MAIL_USERNAME'], recipients=app.config['MAIL_RECIPIENTS'],
                        html_body='Name:' + str(request.form.get('name')) + '</br>' + 'Email:' + str(request.form.get('email')) + '</br>' + 'Message:' + request.form.get('message'))
         else:
             msg = "Validation error"
