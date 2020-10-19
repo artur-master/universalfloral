@@ -51,7 +51,7 @@ a:hover{color: #318890; text-decoration: none;}
 .btn{text-transform: uppercase; padding: 11px 35px; border: none; border-radius: 0px; font-weight: 600; font-size: 15px; outline: none;}
 .btn.btn-primary{background: #000; color: #fff;}
 .btn.btn-primary:hover{background: #00ce1b; color: #fff;}
-.footer{padding: 10px 0px; background: #92bf00;}
+.footer{padding: 10px 0px;}
 .foot-link{color: #fff; text-decoration: none;}
 .foot-link:hover{color: #eeee22; text-decoration: none;}
 .recent-gallery{overflow:hidden;margin-bottom:30px}
@@ -64,8 +64,8 @@ ul.slick-dots li button{text-indent:-999999px;border:0;padding:0;margin:0 6px;cu
 ul.slick-dots li.slick-active button{opacity:1}
 
 /*--- Inner Pages CSS */
-.headerinner{padding: 30px 0px; background: #92bf00;}
-.h1-title{font-size: 40px; color: #fff; font-weight: bold;}
+.headerinner{padding: 30px 0px;}
+.h1-title{font-size: 40px; color: #000; font-weight: bold;}
 .bighead > img{width: 100%;}
 .textbx{color: #848484; padding: 30px 0px; line-height: 26px;} 
 .textbx ul{padding-left: 17px; margin-bottom: 35px;}
